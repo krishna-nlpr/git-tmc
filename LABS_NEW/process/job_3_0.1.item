@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?><talendfile:ProcessType xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" xmlns:xmi="http://www.omg.org/XMI" defaultContext="Default" jobType="Standard" xmi:version="2.0">
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" show="false" value="0"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" show="false" value="0"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" show="false" value=""/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" show="false" value=""/>
@@ -104,13 +106,58 @@
     <routinesParameter id="_Ul9IoPB7Eeil0dTWoAOh1A" name="TalendStringUtil"/>
     <routinesParameter id="_UlgcsPB7Eeil0dTWoAOh1A" name="TalendString"/>
   </parameters>
-<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_08e97c2a-1c5c-44f3-88ce-b947d96cb49b"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>e7/q0Ini/oItbs+a+NTAXA6QH1f48QpDVDfYbhgzc0v+LOeKxIlF31HNDxRuU43J3BeTNk48DX01
-rCCfilP8OQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_169eaa55-7f9c-41ef-8283-a1f2944c5fa2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>bqqVhwgqqN3jSFqJG3/Sq8wxoNrGxA33DfIU19CY2PMdda1+YpBYnJaBS6k6j8krabAEprJpoLNu
-hy8W0Il2Yg==</DigestValue></Reference></SignedInfo><SignatureValue>wfYsEBuVCyTN0G9g6ZxWklnvvYQP1NfCcsS37OUumGaqCuiKfKYEgbJjSvUcZRFvvEDvWNS7bD3c
-IA93jhCRq/2oapn93cQC+dA0hFOC5gnGmT5zAo0NkFjKkuoYWwlGM7qqZXnHaIWWLKiOQzeMxQA3
-akWBQacsTQXDf+BXazGyy1cThWaRWBAUvWCCjaPBXFYHw2erwodHqnpicB10xxXAAxt+A92RQfab
-U6ZCm5dqAmvShMsXoa5d/14yTv24GW42qrgGWv0AgM95gXza5jMQrARVcL0KqF2Dfo1U3bQRzgA4
-S+h6NNtnh+I7YDTboM/00ooyUmj0ttTNDGz6bA==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
+  <node componentName="tImpalaClose" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="672" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tImpalaClose_1"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value=""/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+  </node>
+  <node componentName="tDynamoDBInput" componentVersion="0.100" offsetLabelX="0" offsetLabelY="0" posX="480" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDynamoDBInput_1"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" show="false" value="dynamodb_id"/>
+    <elementParameter field="TEXT" name="ACCESS_KEY" value="&quot;&quot;"/>
+    <elementParameter field="PASSWORD" name="SECRET_KEY" value="0RMsyjmybrE="/>
+    <elementParameter field="CHECK" name="INHERIT_CREDENTIALS" value="false"/>
+    <elementParameter field="CHECK" name="ASSUME_ROLE" value="false"/>
+    <elementParameter field="TEXT" name="ARN" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="ROLE_SESSION_NAME" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="SESSION_DURATION" show="false" value="15"/>
+    <elementParameter field="CHECK" name="USE_ENDPOINT" value="false"/>
+    <elementParameter field="TEXT" name="ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="OPENED_LIST" name="REGION" value="DEFAULT"/>
+    <elementParameter field="CLOSED_LIST" name="ACTION" value="QUERY"/>
+    <elementParameter field="TEXT" name="TYPE" show="false" value="DynamoDB"/>
+    <elementParameter field="TEXT" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="KEY_CONDITION_EXPRESSION"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED_KEY_CONDITION_EXPRESSION" value="false"/>
+    <elementParameter field="TEXT" name="ADVANCED_KEY_CONDITION_EXPRESSION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="CHECK" name="USE_FILTER_EXPRESSION" value="false"/>
+    <elementParameter field="TABLE" name="FILTER_EXPRESSION" show="false"/>
+    <elementParameter field="CHECK" name="USE_ADVANCED_FILTER_EXPRESSION" show="false" value="false"/>
+    <elementParameter field="TEXT" name="ADVANCED_FILTER_EXPRESSION" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TABLE" name="VALUE_MAPPING" show="false"/>
+    <elementParameter field="TABLE" name="NAME_MAPPING"/>
+    <elementParameter field="CHECK" name="SET_STS_ENDPOINT" show="false" value="false"/>
+    <elementParameter field="TEXT" name="STS_ENDPOINT" show="false" value="&quot;&quot;"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDynamoDBInput_1"/>
+  </node>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tImpalaClose_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" show="false" value="tDynamoDBInput_1"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" show="false" value="92;131;150"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+<Signature xmlns="http://www.w3.org/2000/09/xmldsig#" Id="_62a222cf-9a4e-4c53-a4d0-75a4ba122b9e"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/><SignatureMethod Algorithm="http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"/><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>GidoLEYHbp2dDNHKHTt8dI6cKN1iWAtBhc3UtMTzBPMS5PhlEFq5Xc51lLyEGLNuh4EECP1wkkvz
+nxpNHY3xSQ==</DigestValue></Reference><Reference Type="http://www.w3.org/2000/09/xmldsig#SignatureProperties" URI="#_52ebc0b0-8b6d-4674-a69f-d39b240f0fe2"><Transforms><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/></Transforms><DigestMethod Algorithm="http://www.w3.org/2001/04/xmlenc#sha512"/><DigestValue>A3qyheuiyrPZHUzZ6t0oLrbkG4UMvncmZ1IUM/niqrSsj/II2yZPjeVLHhe0RhJWXdEIGMzz1ebj
+0yXvWdYusg==</DigestValue></Reference></SignedInfo><SignatureValue>nysrX2bguxEOBHACmiI3fnKoaIjE6f9mgYutM8Xub+AASRw35wZ63fZkxjMAS7iYgheBUPhi6aLk
+70xzaW0dFsNI32jgo7KZuHY/6hnFypm1dVqAHYFWkaLU55DlCBPrA9pbthkXBov9cGNicMGnodTF
+fFp2z+bgtJW2TQAiI3V6S8CGi21d/WUcDZJ7qRGOF9i/sIu56VFRMOIKVCHT3urjV8ETG0rhiBsU
+Q6pocYbpcK1KJPodYaTLWUJKqm4lUB1LX8oaFtH1iuwQWZRcztqkFcyonA3QhMoo6eQt0Nf8oIsQ
+0fK+JW2bfs2HPJWBnzXvDpx3U0hmQczB/TQRng==</SignatureValue><KeyInfo><X509Data><X509SubjectName>CN=Default code-signing certificate,OU=R&amp;D,O=Talend Inc.,ST=Paris,C=FR</X509SubjectName><X509Certificate>MIIFYzCCA0ugAwIBAgIBATANBgkqhkiG9w0BAQsFADCBjTELMAkGA1UEBhMCRlIxDjAMBgNVBAgM
 BVBhcmlzMQ4wDAYDVQQHDAVQYXJpczEUMBIGA1UECgwLVGFsZW5kIEluYy4xDDAKBgNVBAsMA1Im
 RDEWMBQGA1UEAwwNVGFsZW5kIFImRCBDQTEiMCAGCSqGSIb3DQEJARYTc2VjdXJpdHlAdGFsZW5k
 LmNvbTAeFw0xODAxMTgwMDA2MTJaFw0yMTAxMTcwMDA2MTJaMGwxCzAJBgNVBAYTAkZSMQ4wDAYD
@@ -134,4 +181,4 @@ r3/fbKJ02Ni9kCnkY8wQS1yn45UNl1woSjryza4f4uLKGkrrIsUPXK+Vy4A1Il8XgFfmrtgA8m9s
 EHyu0OyAJH/agWN+GLhF/ssp26oXhiYqTkG4sQtNRFQG0isaYf/JWSt3f8Q+7/pnZpz4mfEAFimI
 BBLzRwDA6x9qqOn0RXxBo9pH16EO3SXPLR64cJum8B/RI/i8H6OkQDO1tEiE6UeceZk++U7fnD3c
 6i9Km85GTgQi6REsVZGIL/tZNIzN//qPwi7cDo3Cf/xmPrIKQhHJaxCqmbjGDmC8AXOaqNfWotVX
-Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_169eaa55-7f9c-41ef-8283-a1f2944c5fa2" Target="#_08e97c2a-1c5c-44f3-88ce-b947d96cb49b"><Timestamp>2018-11-25 06:39:13</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
+Wy2dcglW62PDszE/HKh9</X509Certificate></X509Data></KeyInfo><Object><SignatureProperties><SignatureProperty Id="_52ebc0b0-8b6d-4674-a69f-d39b240f0fe2" Target="#_62a222cf-9a4e-4c53-a4d0-75a4ba122b9e"><Timestamp>2018-11-25 06:39:48</Timestamp></SignatureProperty></SignatureProperties></Object></Signature></talendfile:ProcessType>
