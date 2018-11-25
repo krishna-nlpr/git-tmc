@@ -7,6 +7,19 @@
     <documentationStatus xmi:id="_T9G_8PB7Eeil0dTWoAOh1A" label="unchecked" code="UCK"/>
     <documentationStatus xmi:id="_T9G_8fB7Eeil0dTWoAOh1A" label="checked" code="CHK"/>
     <documentationStatus xmi:id="_T9G_8vB7Eeil0dTWoAOh1A" label="validated" code="VAL"/>
+    <ItemsRelations xmi:id="_wpz08PB7Eeil0dTWoAOh1A">
+      <baseItem xmi:id="_wpz08fB7Eeil0dTWoAOh1A" id="_rTJSQPB7Eeil0dTWoAOh1A" version="0.1" type="job"/>
+      <relatedItems xmi:id="_wpz08vB7Eeil0dTWoAOh1A" id="SQLike" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz08_B7Eeil0dTWoAOh1A" id="Numeric" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz09PB7Eeil0dTWoAOh1A" id="Relational" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz09fB7Eeil0dTWoAOh1A" id="TalendString" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz09vB7Eeil0dTWoAOh1A" id="TalendStringUtil" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz09_B7Eeil0dTWoAOh1A" id="DataOperation" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz0-PB7Eeil0dTWoAOh1A" id="StringHandling" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz0-fB7Eeil0dTWoAOh1A" id="TalendDataGenerator" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz0-vB7Eeil0dTWoAOh1A" id="TalendDate" version="Latest" type="routine"/>
+      <relatedItems xmi:id="_wpz0-_B7Eeil0dTWoAOh1A" id="Mathematical" version="Latest" type="routine"/>
+    </ItemsRelations>
     <migrationTask xmi:id="_T7nyMPB7Eeil0dTWoAOh1A" id="org.talend.repository.localprovider.RemoveRoutineFolderTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_T7nyMfB7Eeil0dTWoAOh1A" id="org.talend.repository.localprovider.model.migration.ChangeXmiSerialization" breaks="5.1.1" version="5.1.2" status="noimpact"/>
     <migrationTask xmi:id="_T7nyMvB7Eeil0dTWoAOh1A" id="org.talend.repository.model.migration.CleanFoldersMigrationTask" breaks="5.1.1" version="5.1.2" status="noimpact"/>
